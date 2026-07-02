@@ -1,0 +1,6 @@
+{
+  "name": "Adaptive EdTech AI Engine",
+  "description": "An interactive, adaptive EdTech visual platform that generates structured explanation modules and adaptive quiz challenges on any topic using the Gemini API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

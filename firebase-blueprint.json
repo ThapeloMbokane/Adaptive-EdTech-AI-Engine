@@ -1,0 +1,53 @@
+{
+  "collections": {
+    "users": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "uid": { "type": "string" },
+          "name": { "type": "string" },
+          "email": { "type": "string" },
+          "role": { "type": "string", "enum": ["student", "teacher", "admin"] },
+          "createdAt": { "type": "string" }
+        },
+        "required": ["uid", "name", "email", "role", "createdAt"]
+      }
+    },
+    "saved_modules": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "userId": { "type": "string" },
+          "topic": { "type": "string" },
+          "documentText": { "type": "string" },
+          "module": {
+            "type": "object",
+            "properties": {
+              "remedial_text": { "type": "string" },
+              "advanced_text": { "type": "string" },
+              "quiz": { "type": "array" }
+            },
+            "required": ["remedial_text", "advanced_text", "quiz"]
+          },
+          "createdAt": { "type": "string" }
+        },
+        "required": ["id", "userId", "topic", "module", "createdAt"]
+      }
+    },
+    "student_scores": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "userId": { "type": "string" },
+          "topic": { "type": "string" },
+          "score": { "type": "number" },
+          "maxScore": { "type": "number" },
+          "date": { "type": "string" }
+        },
+        "required": ["id", "userId", "topic", "score", "maxScore", "date"]
+      }
+    }
+  }
+}
